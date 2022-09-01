@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import 'styles/header.scss'
 
 const Header = () => {
   return (
     <div className='header'>
-      <button>Login</button>
-      <button>Register</button>
+      <Link to={'/login'}>ورود</Link>
+      <Link to={'/'}>خانه</Link>
     </div>
   )
 }

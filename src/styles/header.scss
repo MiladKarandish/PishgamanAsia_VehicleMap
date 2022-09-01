@@ -1,10 +1,14 @@
 .header {
-  max-height: 10%;
+  max-height: 7%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: rgba(255, 127, 80, 0.493);
 
-  & > button {
+  & > a {
     border: none;
     border-radius: 7px;
     padding: 0.5rem 1rem;
+    background-color: #f4f4f4;
   }
 }
