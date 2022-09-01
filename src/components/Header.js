@@ -10,8 +10,6 @@ const Header = () => {
   const { userData, setUserData } = useContext(UserContext)
   const [active, setActive] = useState('/')
 
-  console.log(userData)
-
   const logOut = () => {
     localStorage.removeItem('userData')
     setUserData(null)
@@ -23,7 +21,6 @@ const Header = () => {
 
   return (
     <div className='header'>
-      {console.log(userData)}
       {!userData ? (
         <Link to={'/login'} className={active === '/login' ? 'active' : ''}>
           ورود

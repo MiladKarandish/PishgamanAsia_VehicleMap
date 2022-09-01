@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "vercel deploy --prod"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,10 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.54.8"
+    "font-awesome": "^4.7.0",
+    "leaflet-easybutton": "^2.4.0",
+    "react-leaflet": "^4.0.2",
+    "sass": "^1.54.8",
+    "vercel": "^28.2.0"
   }
 }

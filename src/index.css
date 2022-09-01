@@ -1,3 +1,5 @@
+@import '~leaflet/dist/leaflet.css';
+
 @font-face {
   font-family: 'iransans';
   src: url('./assets/fonts/IRANSansWeb.ttf');
@@ -5,4 +7,8 @@
 
 * {
   font-family: 'iransans';
+}
+
+.leaflet-container {
+  height: 100vh;
 }
