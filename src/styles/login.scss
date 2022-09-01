@@ -1,7 +1,50 @@
 .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   .login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    background-color: #ccc;
+    box-shadow: 1px 2px 10px 1px #36353545;
   }
 
   .login__form_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      border: none;
+      border-radius: 7px;
+      padding: 0.5rem;
+      box-shadow: 0px 10px 13px -7px #0000001d;
+    }
+  }
+
+  .login__form_submit {
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 7px;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0px 10px 13px -7px #0000001d;
+    cursor: pointer;
+    translate: all 5s ease;
+    will-change: transform;
+
+    &:active {
+      transform: scale(0.99);
+    }
   }
 }

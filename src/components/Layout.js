@@ -3,14 +3,17 @@ import Header from './Header'
 import Footer from './Footer'
 import Routes from 'routes/index'
 import 'styles/layout.scss'
+import { UserContextProvider } from 'contexts/UserContext'
 
 const Layout = () => {
   return (
     <div className='layout__container'>
       <Router>
-        <Header />
-        <Routes />
-        <Footer />
+        <UserContextProvider>
+          <Header />
+          <Routes />
+          <Footer />
+        </UserContextProvider>
       </Router>
     </div>
   )

@@ -1,14 +1,33 @@
 .header {
-  max-height: 7%;
+  max-height: 12%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem;
   background-color: rgba(255, 127, 80, 0.493);
 
   & > a {
     border: none;
     border-radius: 7px;
-    padding: 0.5rem 1rem;
-    background-color: #f4f4f4;
+    padding: 0.4rem 1.5rem;
+    color: #333;
+    font-size: 1.15rem;
+    font-weight: bold;
+  }
+
+  & > a.active {
+    border-bottom: 2px solid green;
+  }
+
+  // & > a:first-of-type {
+  //   background-color: transparent;
+  // }
+
+  .logo {
+    height: 150px;
+    margin-right: auto;
+    background-color: transparent;
+    cursor: pointer;
   }
 }
