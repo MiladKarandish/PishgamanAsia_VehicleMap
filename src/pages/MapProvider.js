@@ -1,16 +1,19 @@
 import Map from './Map'
 import { MapContainer, Marker } from 'react-leaflet'
 import MapDropDown from 'components/map/MapDropdown'
+import { MapContextProvider } from 'contexts/MapContext'
 
 const MapProvider = () => {
   return (
-    <MapContainer
-      center={[29.591768, 52.583698]}
-      zoom={13}
-      scrollWheelZoom={true}>
-      {<Map />}
+    <MapContextProvider>
+      <MapContainer
+        center={[29.591768, 52.583698]}
+        zoom={13}
+        scrollWheelZoom={false}>
+        {<Map />}
+      </MapContainer>
       <MapDropDown />
-    </MapContainer>
+    </MapContextProvider>
   )
 }
 

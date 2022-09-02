@@ -1,4 +1,12 @@
 .mapDropdown {
   position: absolute;
-  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 10rem !important;
+  border-radius: 7px;
+  background-color: cornflowerblue;
+  z-index: 2000;
+  transform: translateX(-50%);
+  cursor: pointer;
 }
