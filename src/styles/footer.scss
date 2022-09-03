@@ -1,4 +1,10 @@
 .footer {
+  width: 100%;
   max-height: 5%;
-  background-color: rgba(255, 127, 80, 0.402);
+  padding: 0.5rem;
+  background-color: #dbe2ef0c;
+
+  @media (max-width: 450px) {
+    font-size: 0.5rem;
+  }
 }

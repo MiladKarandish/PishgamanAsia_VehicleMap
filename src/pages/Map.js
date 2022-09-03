@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { TileLayer, Marker, useMapEvent } from 'react-leaflet'
 import L from 'leaflet'
+import location_green from 'assets/icons/location_green.svg'
+import location_red from 'assets/icons/location_red.svg'
 import icon from 'leaflet/dist/images/marker-icon.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 import 'leaflet-easybutton/src/easy-button.js'
@@ -24,6 +26,16 @@ const Map = ({ selectType, start, setStart, end, setEnd }) => {
     }),
     []
   )
+
+  const startIcon = L.icon({
+    iconUrl: location_green,
+    className: 'marker',
+  })
+
+  const endIcon = L.icon({
+    iconUrl: location_red,
+    className: 'marker',
+  })
 
   const map = useMapEvent({
     click(e) {
@@ -72,6 +84,7 @@ const Map = ({ selectType, start, setStart, end, setEnd }) => {
           position={start}
           draggable={true}
           eventHandlers={startDragHandler}
+          icon={startIcon}
         />
       )}
       {end && (
@@ -79,6 +92,7 @@ const Map = ({ selectType, start, setStart, end, setEnd }) => {
           position={end}
           draggable={true}
           eventHandlers={endDragHandler}
+          icon={endIcon}
         />
       )}
     </>

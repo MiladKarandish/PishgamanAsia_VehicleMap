@@ -11,21 +11,26 @@
   gap: 0.5rem;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-color: cornflowerblue;
+  background-color: #454a46c5;
   z-index: 2000;
   transform: translateX(-50%);
+  padding: 0 0.5rem;
 
   .mapDropdown__locations {
-    width: 98%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 0.5rem;
   }
 
   .mapDropdown__locations_item {
-    color: #ccc;
+    width: 100%;
+    margin-bottom: 0.2rem;
+    border-radius: 7px;
+    padding: 0 0.5rem;
+    background-color: #f4f4f4;
+    color: #000;
     cursor: pointer;
 
     span {
@@ -33,6 +38,7 @@
     }
 
     &.active {
+      background-color: rgb(167, 167, 167);
       color: #000;
     }
   }
@@ -108,9 +114,19 @@
     height: 2rem;
     padding: 0 0.5rem;
     border-radius: 7px;
-    background-color: rgb(232, 232, 0);
+    background-color: #19395e;
+    color: #fff;
     border: none;
     font-weight: bold;
     cursor: pointer;
+  }
+
+  @media (max-width: 500px) {
+    width: 95%;
+    font-size: 0.85rem;
+
+    input {
+      font-size: 0.7rem !important;
+    }
   }
 }
