@@ -8,7 +8,7 @@ const Footer = () => {
     <div
       className='footer'
       style={{ display: location.pathname === '/map' ? 'none' : 'flex' }}>
-      <span>تمامی چیز میز های این وبسایت متعلق به یک شخص می باشد &copy;</span>
+      <span>&copy; تمامی حقوق این وبسایت متعلق به پیشگامان میباشد</span>
     </div>
   )
 }

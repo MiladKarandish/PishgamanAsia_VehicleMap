@@ -3,8 +3,14 @@
   max-height: 5%;
   padding: 0.5rem;
   background-color: #dbe2ef0c;
+  text-align: center;
 
-  @media (max-width: 450px) {
-    font-size: 0.5rem;
+  & > span {
+    margin: auto;
+  }
+
+  @media (max-width: 320px) {
+    max-height: 7%;
+    font-size: 0.8rem;
   }
 }
