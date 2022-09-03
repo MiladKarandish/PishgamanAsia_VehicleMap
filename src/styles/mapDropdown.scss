@@ -24,6 +24,19 @@
     padding: 0 0.5rem;
   }
 
+  .mapDropdown__locations_item {
+    color: #ccc;
+    cursor: pointer;
+
+    span {
+      pointer-events: none;
+    }
+
+    &.active {
+      color: #000;
+    }
+  }
+
   .mapDropdown__input {
     width: 100%;
     height: 2rem;
@@ -68,9 +81,10 @@
 
     li {
       width: 100%;
-      // background-color: rgb(100, 237, 141);
       border-bottom: 1px solid #333;
       padding: 0.2rem 0.5rem;
+      cursor: pointer;
+
       &:hover {
         background-color: rgb(245, 161, 130);
       }

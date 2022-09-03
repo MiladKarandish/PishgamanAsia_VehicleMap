@@ -3,21 +3,23 @@ import { TileLayer, Marker, useMapEvent } from 'react-leaflet'
 import L from 'leaflet'
 import icon from 'leaflet/dist/images/marker-icon.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
-import LocationFinder from 'components/map/LocationFinder'
 import 'leaflet-easybutton/src/easy-button.js'
 import 'leaflet-easybutton/src/easy-button.css'
 import 'font-awesome/css/font-awesome.min.css'
 
-const Map = () => {
-  const [start, setStart] = useState(null)
-  const [end, setEnd] = useState(null)
-  const [active, setActive] = useState('start')
-  const eventHandlers = useMemo(
+const Map = ({ selectType, start, setStart, end, setEnd }) => {
+  const startDragHandler = useMemo(
     () => ({
       dragend(e) {
-        if (active === 'start') {
-          setStart(e.target._latlng)
-        }
+        setStart(e.target._latlng)
+      },
+    }),
+    []
+  )
+  const endDragHandler = useMemo(
+    () => ({
+      dragend(e) {
+        setEnd(e.target._latlng)
       },
     }),
     []
@@ -25,9 +27,9 @@ const Map = () => {
 
   const map = useMapEvent({
     click(e) {
-      if (active === 'start') {
+      if (selectType === 'start') {
         setStart(e.latlng)
-      } else if (active === 'end') {
+      } else if (selectType === 'end') {
         setEnd(e.latlng)
       }
     },
@@ -61,7 +63,6 @@ const Map = () => {
 
   return (
     <>
-      {console.log(start)}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
@@ -70,10 +71,16 @@ const Map = () => {
         <Marker
           position={start}
           draggable={true}
-          eventHandlers={eventHandlers}
+          eventHandlers={startDragHandler}
         />
       )}
-      {end && <Marker position={end} draggable={true} />}
+      {end && (
+        <Marker
+          position={end}
+          draggable={true}
+          eventHandlers={endDragHandler}
+        />
+      )}
     </>
   )
 }

@@ -5,4 +5,17 @@
   align-items: center;
   gap: 1rem;
   background-color: rgba(100, 148, 237, 0.559);
+
+  .home__request {
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: transform 10ms ease;
+    background-color: rgb(235, 235, 235);
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }
