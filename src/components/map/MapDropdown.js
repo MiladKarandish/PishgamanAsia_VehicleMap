@@ -177,7 +177,8 @@ const MapDropDown = ({
         </div>
       </div>
 
-      <button disabled={isEverytingSet()} className='mapDropdown__submit'>
+      <button
+        className={`mapDropdown__submit ${isEverytingSet() ? 'disabled' : ''}`}>
         ثبت درخواست
       </button>
     </form>

@@ -120,6 +120,11 @@
     border: none;
     font-weight: bold;
     cursor: pointer;
+
+    &.disabled {
+      background-color: gray;
+      color: rgba(204, 204, 204, 0.645);
+    }
   }
 
   @media (max-width: 500px) {
