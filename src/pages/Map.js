@@ -34,19 +34,10 @@ const Map = ({ selectType, start, setStart, end, setEnd }) => {
       }
     },
 
-    // dragend(e) {
-    //   console.log('mapCenter', e.target.getCenter())
-    //   console.log('map bounds', e.target.getBounds())
-    // },
-
     locationfound(e) {
       map.flyTo(e.latlng, 17)
     },
   })
-
-  const updatedMarker = (e) => {
-    console.log(e)
-  }
 
   useEffect(() => {
     let DefaultIcon = L.icon({

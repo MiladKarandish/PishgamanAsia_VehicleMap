@@ -72,7 +72,6 @@ const MapDropDown = ({
 
         const data = await res.data
 
-        console.log(res)
         toast.update(id, {
           ...toastConfig,
           render: data.message,
@@ -90,7 +89,6 @@ const MapDropDown = ({
       }
     }
 
-    console.log(vehicle)
     if (!start || !end || !vehicle?.id) {
       toast.error('لطفا همه گزینه های لازم را پر کنید')
     } else {

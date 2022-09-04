@@ -18,9 +18,6 @@ const Header = () => {
 
   useEffect(() => {
     setActive(location.pathname)
-    {
-      console.log(location.pathname)
-    }
   }, [location.pathname])
 
   return (

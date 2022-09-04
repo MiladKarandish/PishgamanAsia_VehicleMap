@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import 'styles/hamburgerMenu.scss'
 import Logo from 'assets/logo/logo.png'
 
 const HamburgerMenu = ({ active, navigate }) => {
-  const location = useLocation()
   const [open, setOpen] = useState(false)
 
   return (
