@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import 'styles/hamburgerMenu.scss'
 import Logo from 'assets/logo/logo.png'
 
 const HamburgerMenu = ({ active, navigate }) => {
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    setOpen(false)
+  }, [active])
 
   return (
     <div className={`menu ${open ? 'open' : ''}`}>
