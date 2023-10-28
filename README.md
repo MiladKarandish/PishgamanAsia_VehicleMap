@@ -1,3 +1,3 @@
 # Pishgaman asia company test project.
 
-Skill test project from pishgaman asia company.
+For the login part the api replaced with a fake login so just hit the login button and you'll be good to go.
